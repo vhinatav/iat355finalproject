@@ -7,6 +7,10 @@
     <title>Final Project</title>
 
     <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
 
   </head>
@@ -15,10 +19,9 @@
 
 
     <nav id="PC-nav">
-      <div class="logo">TITLE</div>
+      <div class="logo">Fashion Story</div>
       <div>
       <ul class="nav-links">
-        <li><a href="visualizations2.html">Visualizations</a></li>
         <li><a href="about.html">About us</a></li>
       </ul>
     </div>
@@ -27,13 +30,27 @@
 
     <section id="intro">
       <div class="intro__img-container">
-        <!--<img src="./files/rec.jpg" alt="Fashion story" class="intro-pic"/>-->
+        <img src="./files/intro.jpg" alt="Fashion story" class="intro-pic"/>
       </div>
 
       </div>
 
 
     </section>
+
+    <section id="one-container">
+      <p class="section__text__p1">Let's start with</p>
+      <h1 class="title">Fast Fashion Sales</h1>
+      <div class="section-container">
+          <div class="about-details-container">
+              <div class="about-containers">
+                  <div class="section__pic-container">
+                    <div id="fast-fashion-sales"></div>
+                  </div>
+              </div>
+            </div>
+      </div>
+  </section>
 
 
     <section id="two-containers">
@@ -68,7 +85,7 @@
                          Conubia aptent hac diam tristique nam dictum.</p>
                   </div>
                   <div class="section__pic-container">
-            
+                    <div id="social-media-use" ></div>
                   </div>
                 </div>
               </div>
@@ -182,7 +199,7 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="section__pic-container">
-            
+                      <div id="environmental-issue"></div>
                     </div>
 
                 </div>
@@ -233,8 +250,10 @@
       </div>
    </nav>
    </footer>
-   -->
+   
     <script src="main.js"></script>
+  -->
+    <script src="vis.js"></script>
 
 
 
