@@ -382,12 +382,6 @@ footer p {
   }
   
   @media screen and (max-width: 1200px) {
-    #PC-nav {
-      display: none;
-    }
-    #ham-nav {
-      display: flex;
-    }
     #intro,
     .section-container {
       display: block;
