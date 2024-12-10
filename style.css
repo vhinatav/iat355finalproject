@@ -1,462 +1,162 @@
-/* STYLE GUIDE */
-
-/* I got help with some of the code for styling by following this tutorial: https://youtu.be/ldwlOzRvYOU?si=QpXwsnI9KJnBYVF6 */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
-
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
+/* General Styles */
 body {
-  font-family: "Montserrat", sans-serif;
-  background: #f0e3d3;
+    font-family: DM Sans;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-p {
-  color: rgb(85, 85, 85);
-}
-
-/* TRANSITION */
-
-a, .btn {
-  transition: all 300ms ease;
-}
-
-/* PC NAV */
-
-nav, .nav-links {
-  display: flex;
-}
-
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
-}
-
-.nav-links li a {
-  color: #eb4034;
-  text-decoration: none;
-  position: relative;
-}
-
-.nav-links li a:hover {
-  color: #591914;
-}
-
-.nav-links li a::before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #591914;
-  transform: scaleX(0);
-  transition: transform 0.3s ease; 
-}
-
-.nav-links li a:hover::before {
-  transform: scaleX(1);
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  text-decoration-color: white;
-}
-
-a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
-}
-
-.logo {
-  font-size: 2rem;
-  color:#591914;
-}
-
-.logo:hover {
-  cursor: default;
-}
-
-
-
-/* SECTIONS */
-
-section {
-  padding-top: 4vh;
-  height: 98vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
-  min-height: fit-content;
-}
-
-
-.section-container {
-  display: flex;
-}
-
-/* INTRO SECTION */
-
-#intro {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
-  margin:0; /* for intro pic */
-}
-
-.intro__img-container {
-    position: relative;
-    width: 100%;
-    height: 700px; 
-    overflow: hidden;
-    background-color: #969595;
-}
-
-.intro__img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
-
-#two-containers .section__pic-container {
-    position: relative;
-    width: 700px; 
-    height: 500px; 
-    background-color: #969595; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#one-container .section__pic-container {
-    position: relative;
-    width: 1020px; 
-    height: 500px; 
-    background-color: #969595; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title2 {
-    position: absolute;
-    top: 0px;
-    font-size: 3rem;
-    text-align: center;
-    color: #eb4034;
-    z-index: 1;
-  }
-
-
-.section__pic-container #fast-fashion-sales, #social-media-use, #environmental-issue{
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.section__text {
-  align-self: center;
-  text-align: center;
-}
-
-
-.section__text__p1 {
-  text-align: center;
-  font-weight: 600;
-}
-
-.section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-
-.title {
-  font-size: 3rem;
-  text-align: center;
-  color: #eb4034;
-}
-
-#socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-
-
-/* ICONS */
-
-.icon {
-  cursor: pointer;
-  height: 2rem;
-}
-
-/* BUTTONS */ 
-/* for calculator and github */
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  font-weight: 600px;
-  transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
-  border-radius: 2rem;
-}
-
-.btn-color-1, .btn-color-2 {
-  border: #eb4034 0.1rem solid;
-}
-
-.btn-color-1:hover, .btn-color-2:hover {
-  cursor: pointer;
-}
-
-.btn-color-1, .btn-color-2:hover {
-  background: #eb4034;
-  color: white;
-  
-}
-
-.btn-color-1:hover {
-  background: #591914;
-  border-color: #591914;;
-}
-
-.btn-color-2{
-  background: white;
-}
-
-.btn-color-2:hover{
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
-
-.btn-container {
-  gap: 1rem;
-}
-
-/* one-containers, one-container */
-
-#two-containers, #one-container{
-  position: relative;
-  text-align: center;
-}
-
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers, .about-details-container {
-  display: flex;
-}
-
-.bio-pic {
-  border-radius: 2rem;
-}
-
-.details-containers {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53,53,53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-
-
-
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
-
-
-
-
-.text-container {
+header, section, footer {
+    padding: 48px;
     text-align: left;
 }
 
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    height: auto;
 
+    background: #4E342E;
+    color: #E0E0E0;
 
-/* FOOTER SECTION */
-
-footer {
-  clear: both;
-  margin-top: 20px;
-  padding: 20px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-footer p {
-  text-align: center;
+.hero h1 {
+    font-family: Instrument Serif;
+    font-weight: lighter;
+    font-size: 5em;
+    line-height: 0.9;
+    margin: 0;
 }
 
-/* calculator */
+.hero button {
+    font-family: DM Sans;
+    font-weight: 400;
+    background: #E0E0E0;
+    color: #4E342E;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero button:hover {
+    background: #D7CCC8;
+    color: #424242;
+}
+
+.hero p {
+    margin-top: 24px;
+}
+
+/* Section Styles */
+#section1 {
+    background: linear-gradient(#D7CCC8 90%, #FAFAFA);
+    padding: 48px;
+}
+
+section h2 {
+    font-family: Instrument Serif;
+    font-weight: lighter;
+    font-size: 3em;
+    line-height: 1;
+    color: #424242;
+    margin-left: 24px;
+    margin-bottom: 0px;
+}
+
+section p {
+    color: #424242;
+    margin-left: 24px;
+    max-width: 70%;
+}
+
+#section2 {
+    background: #FAFAFA;
+}
+#section2 h2{
+    color: #4A148C;
+}
+#section2 p{
+    color: #4A148C;
+}
+
+#section3 {
+    background: linear-gradient(#FAFAFA 90%, #D7CCC8);
+}
+#section3 h2{
+    color: #4A148C;
+}
+#section3 p{
+    color: #4A148C;
+}
+
+#section4 {
+    background: #D7CCC8;
+}
+
+.chart-placeholder {
+    background: #eee;
+    height: 500px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 48px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+#section5 button {
+    font-family: DM Sans;
+    font-weight: 400;
+    background: #388E3C;
+    color: #FAFAFA;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 24px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#section5 button:hover {
+    background: #66BB6A;
+    color: #FAFAFA;
+}
 
 #calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  padding-top: 10vh;
+    min-height: 100vh;
+    height: auto;
 }
 
-.calculator-info-upper-container {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 2rem;
-  border: 1px solid rgb(163, 163, 163);
-  background-color: rgb(250, 250, 250);
-  margin-bottom: 2rem;
-  padding: 1rem;
+/* Footer */
+footer {
+    background: #4E342E;
+    color: #E0E0E0;
+    padding: 48px 48px;
 }
 
-.calculator-info-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
+footer a {
+    font-family: DM Sans;
+    font-weight: 300;
+    color: #E0E0E0;
+    text-decoration: none;
 }
 
-.calculator-info-container p {
-  font-size: 16px;
+footer a:hover {
+    color: #D7CCC8;
 }
-
-.calculator-icon {
-  cursor: default;
-  height: 2.5rem;
-  margin-right: 0.5rem;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
-/* VISUALIZATIONS */
-
-
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 1400px) {
-    #intro {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #calculator{
-      height: fit-content;
-    }
-  }
-  
-  @media screen and (max-width: 1200px) {
-    #intro,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
-
-  }
-  
-  @media screen and (max-width: 600px) {
-    #calculator,
-    footer {
-      height: 40vh;
-    }
-    #intro {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    .about-containers,
-    .calculator-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .calculator-info-container {
-      margin: 0;
-    }
-    .calculator-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
-
-
-  }
